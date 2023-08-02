@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+  let array = [97,32,48,51];
+  let result = [];
+  function insertNumberToArray(array,x,index){
+    if(index >= 0 && index < array.length){
+        for(let i = 0; i < array.length;i++){
+            if(i !== index){
+                result.push(array[i]);
+            } else {
+                result.push(x);
+                result.push(array[i]);
+            }
+        }
+    } else {
+        return array;
+    }
+    return result;
+  }
+  prime = insertNumberToArray(array,241,2);
+  document.write(prime);
+</script>
+</body>
+</html>
